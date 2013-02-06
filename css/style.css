@@ -1,3 +1,4 @@
+@import url(../required-foundation/style.css);
 /*
 Theme Name: Axis Child Theme
 Theme URI: http://certifiedsquare.com/
@@ -7,7 +8,3 @@ Author URI: http://certifiedsquare.com/about/
 Template: required-foundation
 Version: 0.1.0
 */
-
-@import url(../required-foundation/style.css);
-
-
