@@ -1,0 +1,116 @@
+
+
+
+@font-face {
+    font-family: 'amertype_md_btmedium';
+    src: url('../fonts/amrtypen-webfont.eot');
+    src: url('../fonts/amrtypen-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/amrtypen-webfont.woff') format('woff'),
+         url('../fonts/amrtypen-webfont.ttf') format('truetype'),
+         url('../fonts/amrtypen-webfont.svg#amertype_md_btmedium') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+
+// ================================
+
+body { background: url("../images/bg.png") no-repeat top center fixed; margin:0; padding: 0;
+background-size: cover;
+-moz-background-size: cover;
+-webkit-background-size: cover;
+-o-background-size: cover;
+filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='.bg.png', sizingMethod='scale');
+-ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='bg.png', sizingMethod='scale')";
+}
+
+/*
+This next definition doesn't allow the background to get any smaller
+than a predefined size (640x426px in this case). Change the values
+here to match your background image size. The configuration in the
+flexi-background javascript file should also match these values.
+*/
+
+@media only all and (max-width: 1280px) and (max-height: 600px) {
+body {
+background-size: 1280px 600px;
+-moz-background-size: 1280px 600px;
+-webkit-background-size: 1280px 600px;
+-o-background-size: 1280px 600px;
+}
+}
+
+/*
+The next 2 definitions are for support in iOS devices.
+Since they don't recoginze the 'cover' keyword for background-size
+we need to simulate it with percentages and orientation
+*/
+
+
+@media only screen and (orientation: portrait) and (device-width: 320px), (device-width: 768px) {
+body { -webkit-background-size: auto 100%; }
+}
+ 
+@media only screen and (orientation: landscape) and (device-width: 320px), (device-width: 768px) {
+body { -webkit-background-size: 100% auto; }
+}
+
+// ================================
+img { display: block; }
+h1, h2, h3, h4, h5, h6 { font-family: inherit; }
+a { color: $secondaryColor; }
+
+
+#logo { display: block; text-align: center; @include column(12); }
+
+nav { @include column(11,center); }
+.nav { list-style: none; margin-left: 0; }
+.nav li { display: inline; }
+.nav a { display: inline-block; }
+
+.site-nav { /*width: 100%;*/ @include innerRow(); }
+.site-nav li { float: left; text-align: center; @include column(2); @include mobileColumn(2); width: 20%; }
+.site-nav {
+	a { padding: 5px 10px; font-size: ms(1); color: $black; }
+	a:hover, a:active { color: $secondaryColor; }
+}
+
+
+
+
+body { /*background: url("../images/bg.png") no-repeat top center;*/ font-family: "amertype_md_btmedium"; }
+
+
+.header { margin-bottom: ms(4); margin-top: ms(4); }
+.main { margin-bottom: ms(4); }
+.footer { text-align: center; margin-bottom: ms(4);
+	p { margin-bottom: 0; }
+	.address { letter-spacing: 8px; font-size: 23px; }
+}
+
+.contact-info span { color: $secondaryColor; font-weight: bold; }
+.contact-info .address { color: $secondaryColor; font-weight: bold; font-size: 16px; }
+.phoneEmail, .social, .contact-info .address { margin-bottom: 12px; }
+
+.social li { display: inline; }
+.location-description { color: #444; font-size: 16px; }
+
+.menu { text-align: center;
+	ul { list-style: none; }
+}
+
+.gallery li { margin-bottom: 12px; }
+.gallery img { border: 4px solid rgba(0,0,0,.4); }
+.gallery img { border: 4px solid $secondaryColor; }
+
+.clearing-blackout { height: 60%; width: 60%; margin-top: 20%; margin-left: 20%; }
+.clearing-assembled .clearing-container ul[data-clearing] li.visible { border-top: 4px solid white; }
+
+
+
+@media only screen and (max-width: 767px) {
+	.site-nav a { font-size: ms(0); }
+	.map { margin-bottom: 12px; }
+}
+

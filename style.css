@@ -1,0 +1,11 @@
+/*
+Theme Name:     Axis
+Description:    Child Theme
+Author:         Certified Square
+Template:       required-foundation
+
+(optional values you can add: Theme URI, Author URI, Version)
+*/
+
+@import url("../required-foundation/style.css");
+@import url("../axis/stylesheets/app.css");
